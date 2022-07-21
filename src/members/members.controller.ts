@@ -20,13 +20,13 @@ import { UpdateMemberData } from './dto/updateMember.dto';
 export class MembersController {
   constructor(private MembersService: MembersService) {}
   @Get()
-  @ApiTags('get all member')
+  @ApiTags('Get all member')
   findAll() {
     return this.MembersService.getMembers();
   }
 
   @Get(':id')
-  @ApiTags('get member by id')
+  @ApiTags('Get member by id')
   @ApiParam({ name: 'id' })
   async findMemberById(@Param('id', ParseIntPipe) id) {
     const member = await this.MembersService.findMemberById(id);
@@ -37,11 +37,14 @@ export class MembersController {
   }
 
   @Post()
+  @ApiTags('Create member')
   async createNewMember(@Body() member: createNewMember) {
     return await this.MembersService.createNewMember(member);
   }
 
   @Delete(':id')
+  @ApiTags('Delete member by id')
+  @ApiParam({ name: 'id' })
   async removeMemberById(@Param('id', ParseIntPipe) id) {
     const member = await this.MembersService.findMemberById(id);
     if (!member) {
@@ -51,6 +54,7 @@ export class MembersController {
   }
 
   @Patch(':id')
+  @ApiTags('Update member by id')
   async editMemberById(
     @Body() member: UpdateMemberData,
     @Param('id') id: number,
