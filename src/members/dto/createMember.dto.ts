@@ -75,7 +75,7 @@ export class createNewMember {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  readonly msTeams: Date;
+  readonly msTeams: string;
 
   @ApiProperty()
   @IsNotEmpty()

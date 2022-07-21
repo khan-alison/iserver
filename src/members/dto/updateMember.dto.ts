@@ -71,7 +71,7 @@ export class UpdateMemberData {
   @ApiProperty()
   @IsOptional()
   @IsString()
-  readonly msTeams: Date;
+  readonly msTeams: string;
 
   @ApiProperty()
   @IsOptional()

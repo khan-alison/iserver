@@ -30,7 +30,7 @@ export class Members extends BaseEntity {
   studentId: number;
 
   @Column({ name: 'ms_teams_email', unique: true })
-  msTeams: Date;
+  msTeams: string;
 
   @Column({ name: 'facebook_account' })
   facebookAccount: string;
