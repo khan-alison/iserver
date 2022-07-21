@@ -102,7 +102,7 @@ export class UpdateMemberData {
   @ApiProperty()
   @IsOptional()
   @IsString()
-  readonly generation: Date;
+  readonly generation: string;
 
   @ApiProperty()
   @IsOptional()
@@ -112,7 +112,7 @@ export class UpdateMemberData {
   @ApiProperty()
   @IsOptional()
   @IsString()
-  readonly createBy: Date;
+  readonly createBy: string;
 
   @ApiProperty()
   @IsOptional()

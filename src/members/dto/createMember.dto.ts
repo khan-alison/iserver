@@ -106,7 +106,7 @@ export class createNewMember {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  readonly generation: Date;
+  readonly generation: string;
 
   @ApiProperty()
   @IsNotEmpty()
@@ -116,7 +116,7 @@ export class createNewMember {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  readonly createBy: Date;
+  readonly createBy: string;
 
   @ApiProperty()
   @IsNotEmpty()

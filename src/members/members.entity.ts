@@ -48,13 +48,13 @@ export class Members extends BaseEntity {
   departmentCode: string;
 
   @Column({ name: 'generation' })
-  generation: Date;
+  generation: string;
 
   @Column({ name: 'created_at' })
   createdAt: Date;
 
   @Column({ name: 'created_by' })
-  createBy: Date;
+  createBy: string;
 
   @Column({ name: 'joined_since' })
   joinedSince: Date;

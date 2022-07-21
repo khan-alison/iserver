@@ -63,7 +63,7 @@ export class MembersService {
     const editedMember = await this.membersRepository.findOne({
       where: { id },
     });
-    await this.membersRepository.update(id, {
+    const newData = await this.membersRepository.update(id, {
       account: member.account ? member.account : null,
       firstName: member.firstName ? member.firstName : null,
       lastName: member.lastName ? member.lastName : null,
@@ -82,9 +82,8 @@ export class MembersService {
     });
 
     return {
-      statusCode: 'success',
-      message: 'Update successfully',
-      data: editedMember,
+      statusCode: 200,
+      message: 'Update successfully!',
     };
   }
 
