@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MembersModule } from './members/members.module';
+import { ClassesModule } from './classes/classes.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { MembersModule } from './members/members.module';
       subscribers: ['src/subscriber/**/*.ts'],
     }),
     MembersModule,
+    ClassesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
